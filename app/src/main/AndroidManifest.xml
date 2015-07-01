@@ -18,6 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="spam.cbrez101.gmail.com.myapplication.Settings"
+            android:label="@string/action_settings"
+            android:parentActivityName="spam.cbrez101.gmail.com.myapplication.Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="spam.cbrez101.gmail.com.myapplication.Settings" />
+        </activity>
+
     </application>
 
 </manifest>

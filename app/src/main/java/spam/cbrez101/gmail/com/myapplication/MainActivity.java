@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static java.lang.Integer.parseInt;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -34,11 +36,10 @@ public class MainActivity extends ActionBarActivity {
 
         btnSendSMS.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                System.out.println(phnNumber.getText().toString());
-                sendSMS(phnNumber.getText().toString(), message.getText().toString());
 
-                //here i can send message to emulator 5556.
-
+                for(int i=0;i>parseInt(spamNum.getText().toString());i++){
+                    sendSMS(phnNumber.getText().toString(), message.getText().toString());
+                }
             }
         });
 
@@ -57,6 +58,10 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+    public void switchIntent(View view){
+
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -70,10 +75,12 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
 
+
+
         if (id == R.id.action_settings){
             System.out.println("Settings");
-            Intent intent = new Intent(this, Settings.class);
-            startActivity(intent);
+            Intent settings_intent = new Intent(this, Settings.class);
+            startActivity(settings_intent);
             return true;
         }
 

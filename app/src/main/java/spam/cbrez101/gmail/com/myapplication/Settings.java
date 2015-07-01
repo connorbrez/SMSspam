@@ -1,5 +1,6 @@
 package spam.cbrez101.gmail.com.myapplication;
 
+import android.content.Intent;
 import android.os.Build;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
@@ -21,9 +22,13 @@ public class Settings extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
+        Intent intent = getIntent();
 
-
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            toolbar.setTitle(R.string.action_settings);
+            setSupportActionBar(toolbar);
+        }
     }
 
 

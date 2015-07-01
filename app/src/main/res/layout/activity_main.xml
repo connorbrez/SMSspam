@@ -63,7 +63,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/spamNumber"
-        android:hint="Messages Per Seccond"
+        android:hint="Messages Per Click"
         android:layout_below="@+id/phoneNumber"
         android:layout_alignLeft="@+id/phoneNumber"
         android:layout_alignStart="@+id/phoneNumber"
